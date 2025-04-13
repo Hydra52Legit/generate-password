@@ -1,0 +1,154 @@
+/* InfoApp.css */
+.password-info-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.password-info-title {
+    color: #2c3e50;
+    border-bottom: 2px solid #4300be;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.password-info-section {
+    margin-top: 25px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-left: 3px solid transparent;
+}
+
+.password-info-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-left: 3px solid #4300be;
+}
+
+.password-info-subtitle {
+    color: #4300be;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.password-info-text {
+    color: #34495e;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.password-info-list {
+    padding-left: 20px;
+    margin: 15px 0;
+    font-size: 1rem;
+    list-style-type: none;
+}
+
+.password-info-list li {
+    margin-bottom: 10px;
+    color: #2c3e50;
+    position: relative;
+    padding-left: 25px;
+}
+
+.password-info-list li:before {
+    content: "•";
+    color: #ff9253;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+.password-info-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.password-info-th {
+    border: 1px solid #ecf0f1;
+    padding: 15px;
+    background-color: #ff9253;
+    color: white;
+    text-align: left;
+    font-weight: 600;
+}
+
+.password-info-td {
+    border: 1px solid #ecf0f1;
+    padding: 12px 15px;
+    color: #2c3e50;
+    transition: background-color 0.2s ease;
+}
+
+.password-info-tr:hover .password-info-td {
+    background-color: #f9f9f9;
+}
+
+.password-info-disclaimer {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 10px;
+    font-style: italic;
+    text-align: right;
+}
+
+.password-info-recommendation {
+    margin-top: 30px;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #cc2e2e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.password-info-recommendation:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .password-info-container {
+        padding: 15px;
+    }
+    
+    .password-info-section {
+        padding: 20px 15px;
+    }
+    
+    .password-info-table {
+        font-size: 0.85rem;
+    }
+    
+    .password-info-th, 
+    .password-info-td {
+        padding: 10px 12px;
+    }
+}
